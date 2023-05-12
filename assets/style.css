@@ -1,0 +1,218 @@
+/*Navigation Bar*/
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: palevioletred;
+}
+
+.logo {
+  width: 25%;
+  font-size:300%;
+  font-family: monospace;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-size:200%;
+  font-family: monospace;
+}
+
+.nav-links li {
+  margin-left: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+}
+
+.nav-links a:hover {
+  color:aqua;
+  font-weight: bold;
+}
+
+/*Hero Section*/
+.hero {
+  display: flex;
+  align-items: center;
+  padding: 100px 20px;
+  background-color: aqua;
+}
+
+.hero-content {
+  flex: 1;
+  padding-right: 20px;
+}
+
+.subtitle {
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  font-family: monospace;
+  font-style:italic
+}
+
+.hero-image {
+  flex: 1;
+  text-align: right;
+}
+
+.hero-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 20%;
+}
+
+/*About Me Section*/
+.about-me {
+  background-color:palevioletred;
+}
+
+/*Structure for rest of webpage*/
+.about-me,
+.my-work,
+.contact-me {
+  display: flex;
+  align-items: center;
+  padding: 100px 20px;
+  font-family:monospace
+}
+
+.section-title {
+  width: 25%;
+  text-align: right;
+  padding-right: 20px;
+  position: relative;
+}
+
+.section-title h2 {
+  font-size: 48px;
+  font-weight: bold;
+}
+
+
+.section-title::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  height: 250%;
+  width: 5px;
+  background-color: darkblue;
+  transform: translateY(-40%);
+}
+
+/*My Work Section*/
+.my-work {
+  display: flex;
+  align-items: center;
+  padding: 100px 20px;
+  background-color: cyan;
+}
+
+.section-content {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  filter: blur(5px);
+  transition: filter 0.3s ease-in-out;
+}
+
+.card:hover img {
+  filter: blur(0);
+}
+
+.card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.card:hover .card-overlay {
+  opacity: 1;
+}
+
+.card-overlay h3 {
+  color: palevioletred;
+  font-size: 25px;
+  text-align: center;
+  padding: 10px;
+  margin: 0;
+}
+
+.large-card {
+  grid-column: span 2;
+}
+
+/*Contact Me Section*/
+.contact-me {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 100px 20px;
+  background-color: palevioletred;
+}
+
+.contact-list {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.contact-list li {
+  margin-left: 20px;
+}
+
+.contact-list h3 {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 30px;
+}
+
+.contact-list p {
+  margin: 5px 0 0;
+  fon-size: 15px;
+}
+
+.contact-list a {
+  color:inherit;
+}
+
+.contact-list a:hover {
+  color:cyan;
+}
+
+/*Media Query for Mobile Devices*/
+@media (max-width: 768px) {
+  body{
+    font-size: auto;
+    height: auto;
+    width: auto;
+    margin: 0 auto;
+  }
+}
